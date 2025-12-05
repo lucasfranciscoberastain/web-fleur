@@ -1,0 +1,643 @@
+/* =======================
+   RESET BÁSICO
+======================= */
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: "Bodoni Moda SC", serif; }
+
+/* Fondo oscuro del nav cuando el menú está abierto */
+body.menu-open nav {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* =======================
+   HEADER / NAV BASE
+======================= */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('/fondo/backgound.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background-color: #000000e3;
+  padding: 3px 6%;
+  position: relative;
+  z-index: 40;
+}
+
+nav img {
+  width:120px;
+  display:block;
+}
+
+
+/* =======================
+   NAV - ESCRITORIO
+======================= */
+.nav-links {
+  position: static !important;
+  width: auto;
+  height: auto;
+  background: transparent !important;
+  padding-top: 0 !important;
+  right: auto !important;
+  transition: none !important;
+  text-align: center;
+}
+
+.nav-links ul {
+  list-style:none;
+  display:flex;
+  gap: 20px;
+  align-items:center;
+  margin:0;
+}
+
+.nav-links ul li { display:inline-block; }
+
+.nav-links ul li a {
+  color:#fff;
+  text-decoration:none;
+  font-size:16px;
+}
+
+/* efecto underline */
+.nav-links ul li::after{
+  content:'';
+  display:block;
+  width:0%;
+  height:2px;
+  background:#5d5d5dc7;
+  transition:0.5s;
+}
+.nav-links ul li:hover::after { width:100%; }
+
+/* iconos ocultos en PC */
+nav .bi {
+  display:none;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+
+
+/* =======================
+   HERO / TEXTOS
+======================= */
+.text-box {
+  width:90%;
+  color:#fff;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  text-align:center;
+}
+.text-box h1 { font-size:50px; }
+.text-box p { font-size:22px; margin:10px 0 40px; }
+
+
+/* =======================
+   BOTÓN HERO
+======================= */
+.hero-btn {
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;
+  border:1px solid #b5b5b5d0;
+  padding:12px 34px;
+  font-size:13px;
+  background:transparent;
+  transition:.2s;
+}
+.hero-btn:hover {
+  background:#858585;
+  color:#232323da;
+}
+
+
+/* =======================
+   RESPONSIVE - MÓVIL
+======================= */
+@media (max-width:700px) {
+
+  /* mostrar hamburguesa */
+  nav .bi-list {
+    display:block !important;
+  }
+
+  /* panel lateral */
+  .nav-links {
+    position:fixed !important;
+    top:0;
+    right:-260px;
+    width:260px;
+    height:100vh;
+    background:rgba(86,86,86,0.92);
+    padding-top:70px;
+    transition:right .35s ease;
+    z-index:200;
+    text-align:left;
+  }
+
+  .nav-links.show {
+    right:0 !important;
+  }
+
+  /* icono X */
+  .nav-links i.bi-x-lg {
+    display:block;
+    position:absolute;
+    top:18px;
+    right:18px;
+    font-size:24px;
+    color:#fff;
+    cursor:pointer;
+  }
+
+  /* links verticales */
+  .nav-links ul {
+    display:block;
+    padding-left:20px;
+  }
+
+  .nav-links ul li {
+    margin:18px 0;
+  }
+
+  .nav-links ul li a {
+    font-size:16px;
+    color:#fff;
+  }
+
+  /* evitar que el logo quede tapado */
+  nav img {
+    z-index:210;
+    position:relative;
+  }
+}
+
+
+/* =======================
+   ESCRITORIO (reseteo móvil)
+======================= */
+@media (min-width:701px) {
+  .nav-links {
+    position:static !important;
+    right:auto !important;
+    top:auto !important;
+    width:auto !important;
+    height:auto !important;
+    background:transparent !important;
+    padding-top:0 !important;
+    transition:none !important;
+    display:block !important;
+  }
+
+  .nav-links ul {
+    display:flex !important;
+    gap:20px;
+    align-items:center;
+  }
+
+  .bi-list,
+  .nav-links .bi-x-lg {
+    display:none !important;
+  }
+}
+
+
+/* =======================
+   MÓVIL - PANEL LATERAL
+======================= */
+@media (max-width:700px) {
+
+  .bi-list {
+    display:block !important;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+    z-index:9999;
+  }
+
+  .nav-links {
+    right:-200px !important;
+    width:200px !important;
+    height:100vh !important;
+    background:#000 !important;
+    padding-top:70px !important;
+    transition:right .36s cubic-bezier(.2,.9,.2,1) !important;
+    overflow-y:auto !important;
+    text-align:left !important;
+  }
+
+  .nav-links .bi-x-lg {
+    display:block !important;
+    position:absolute !important;
+    top:18px !important;
+    right:18px !important;
+    font-size:22px !important;
+    color:#fff !important;
+    cursor:pointer !important;
+    z-index:350 !important;
+  }
+
+  .nav-links ul {
+    display:block !important;
+    padding-left:22px !important;
+  }
+
+  .nav-links ul li {
+    display:block !important;
+    margin:16px 0 !important;
+  }
+
+  nav > a img {
+    position:relative;
+    z-index:310;
+  }
+}
+
+
+/* =======================
+   EVITAR SCROLL AL ABRIR MENÚ
+======================= */
+body.menu-open {
+  overflow:hidden;
+  height:100%;
+  touch-action:none;
+}
+
+
+/* =======================
+   ESTADO DEL MENÚ
+======================= */
+.nav-links.show ~ .bi-list { display:none; }
+.bi-list.hidden { display:none !important; }
+
+.bi-list {
+  font-size:32px;
+  color:white;
+  cursor:pointer;
+  display:none;
+}
+
+
+/* hamburguesa visible solo en móvil */
+@media (max-width:700px) {
+  .bi-list { display:block; }
+}
+
+/* X visible solo en móvil */
+.nav-links .bi-x-lg { display:none; }
+@media (max-width:700px) {
+  .nav-links .bi-x-lg {
+    display:block;
+    font-size:32px;
+    color:white;
+    margin:20px;
+    cursor:pointer;
+  }
+}
+
+
+/* =======================
+   LOGO RESPONSIVE
+======================= */
+@media (max-width:700px) {
+  nav img { width:130px !important; }
+}
+
+@media (max-width:450px) {
+  nav img { width:70px !important; }
+}
+
+
+/* =======================
+   NAV BAR OSCURECIDO
+======================= */
+body.menu-open nav {
+  background-color: rgba(0, 0, 0, 0.274) !important;
+  backdrop-filter: blur(6px);
+  transition: background-color .3s ease;
+}
+
+
+/* =======================
+   ORGANIZACIÓN DEL MENÚ AL ABRIR
+======================= */
+.nav-links.show ul {
+  flex-direction:column;
+  gap:30px;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  margin-top:60px;
+}
+
+.nav-links.show ul li a {
+  text-align:center;
+  display:block;
+  width:100%;
+}
+
+
+/* =======================
+   AJUSTE POSICIÓN TEXTO
+======================= */
+@media (max-width:700px) {
+  .nav-links ul {
+    padding-right:40px !important;
+  }
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  /* La animación se aplicará mediante JS */
+}
+
+.carousel-track .slide {
+  flex: 0 0 auto;
+}
+
+.carousel-track .slide img {
+  width: auto;           /* que respete proporción */
+  height: 200px;         /* altura fija del carrusel */
+  object-fit: cover;     /* recorta o ajusta la imagen sin distorsionar */
+  border-radius: 10px;
+  display: block;
+}
+
+
+/* Responsive */
+@media (max-width:1200px) { .carousel-track img { max-width: 200px; } }
+@media (max-width:900px) { .carousel-track img { max-width: 180px; } }
+@media (max-width:600px) { .carousel-track img { max-width: 140px; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-us {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinea verticalmente los elementos */
+  margin: 50px auto;
+  gap: 20px; /* Espacio entre texto e imagen */
+}
+
+.about-text {
+  flex: 1; /* Ocupa el espacio disponible */
+  margin: 0 20px;
+}
+
+.about-image img {
+  width: 100%; /* Ocupa todo el contenedor */
+  max-width: 500px; /* Tamaño máximo para pantallas grandes */
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h2 {
+  font-size: 45px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.about-text h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 17px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #505050;
+  color: #fff;  
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: #000000;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    max-width: 100%;
+    margin: 20px 0; /* Espacio entre elementos */
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .about-text h3 {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* cartas más pequeñas */
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;  /* apila el texto verticalmente */
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+  text-align: center;      /* asegura que el texto se centre */
+  margin: 0 20px;
+}
+
+.card-text h2 {
+  font-size: 45px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+
+
+.card {
+    background: var(--blanco);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;       /* mantiene proporción de la imagen */
+    object-fit: contain; /* asegura que no se corte */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Responsivo: 2 cartas por fila en móviles */
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+.footer-legal {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    padding: 25px 15px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--negro);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ALERTA INFERIOR MINIMALISTA CON ICONOS */
+.social-alert {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000bd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  z-index: 9999;
+  font-family: 'Arial', sans-serif;
+}
+
+.social-alert a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+
+.social-alert a img:hover {
+  transform: scale(1.2);
+}
+
+.social-alert .close-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
