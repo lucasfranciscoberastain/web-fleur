@@ -1,7 +1,25 @@
 /* =======================
    RESET BÁSICO
-======================= */
-* { box-sizing: border-box; margin:0; padding:0; }
+
+   ======================= */
+
+
+
+
+
+
+html,
+body {
+width:100%;
+overflow-x: hidden;
+}
+
+
+
+
+
+
+   * { box-sizing: border-box; margin:0; padding:0; }
 body { font-family: "Bodoni Moda SC", serif; }
 
 /* Fondo oscuro del nav cuando el menú está abierto */
@@ -728,11 +746,4 @@ nav img {
   .nav-links ul li a {
     font-size: 22px;
   }
-}
-
-
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
 }
