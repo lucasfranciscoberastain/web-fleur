@@ -747,3 +747,12 @@ nav img {
     font-size: 22px;
   }
 }
+@media (max-width: 700px) {
+  .text-box h1 {
+    font-size: 26px;
+  }
+
+  .text-box p {
+    font-size: 12px;
+  }
+}
