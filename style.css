@@ -641,3 +641,91 @@ body.menu-open nav {
   color: #fff;
   cursor: pointer;
 }
+
+
+@media (max-width:700px) {
+  .nav-links {
+    right: -100% !important;   
+  }
+}
+body {
+  overflow-x: hidden !important;
+}
+.bi-list {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+}
+
+nav img {
+  width: 120px;
+}
+
+/* --- MOBILE MENU --- */
+.nav-links {
+  position: fixed;
+  background: #000;
+  height: 100vh;
+  width: 250px;
+  top: 0;
+  right: -250px; /* ES MUY IMPORTANTE PARA QUE NO SE VEAN CORRIDAS */
+  transition: 0.4s ease;
+  padding-top: 80px;
+  z-index: 1000;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.bi-list, .bi-x-lg {
+  display: none;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+
+  .bi-list, .bi-x-lg {
+    display: block;
+  }
+
+  .nav-links ul li a {
+    font-size: 22px;
+  }
+}
