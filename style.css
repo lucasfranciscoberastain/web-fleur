@@ -145,29 +145,6 @@ nav .bi {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ----- Ajuste del texto principal en celular ----- */
 @media (max-width: 700px) {
   .text-box h1 {
@@ -425,15 +402,6 @@ body.menu-open nav {
 
 
 
-
-
-
-
-
-
-
-
-
 .carousel {
   overflow: hidden;
   width: 100%;
@@ -463,16 +431,6 @@ body.menu-open nav {
 @media (max-width:1200px) { .carousel-track img { max-width: 200px; } }
 @media (max-width:900px) { .carousel-track img { max-width: 180px; } }
 @media (max-width:600px) { .carousel-track img { max-width: 140px; } }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -560,26 +518,6 @@ body.menu-open nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* cartas más pequeñas */
@@ -632,13 +570,6 @@ body.menu-open nav {
 }
 
 
-
-
-
-
-
-
-
 .footer-legal {
     text-align: center;
     font-size: 12px;
@@ -648,20 +579,6 @@ body.menu-open nav {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--negro);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -714,18 +631,6 @@ body {
   position: relative;
   z-index: 9999 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -797,12 +702,6 @@ nav img {
     font-size: 12px;
   }
 }
-
-
-
-
-
-
 
 
 /* ----- Ajuste del texto principal en celular ----- */

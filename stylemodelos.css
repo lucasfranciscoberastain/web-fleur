@@ -1,0 +1,107 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "Bodoni Moda SC", serif;
+    overflow-x: hidden;
+}
+
+/* LOGO */
+.logo-container {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.logo-container img {
+    width: 150px;
+}
+
+/* GRID */
+.models-section {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    padding-bottom: 60px;
+}
+
+/* CARD */
+.model-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.model-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ZOOM */
+.model-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.model-card:hover img {
+    transform: scale(1.10);
+}
+
+/* INFO */
+.model-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.35s ease;
+}
+
+.model-card:hover .model-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BUTTON */
+.contact-btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #ffffffd2;
+    color: #000;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.contact-btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .logo-container img {
+        width: 110px;
+    }
+
+    .model-card img {
+        height: 300px;
+    }
+}
