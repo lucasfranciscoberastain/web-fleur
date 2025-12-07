@@ -486,6 +486,222 @@ body.menu-open nav {
   transition: 0.3s ease;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================
+   ABOUT ESPACIOSO (ESTILO FLEUR)
+============================ */
+
+.about-spacious {
+    width: 85%;
+    margin: 90px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-spacious-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.10);
+}
+
+.about-spacious-text {
+    flex: 1;
+    text-align: center; /* CENTRA título y texto */
+}
+
+.about-title {
+    font-size: 46px;
+    color: #000;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.about-spacious-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+/* Contenedor del botón centrado */
+.about-center-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.about-spacious-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.about-spacious-btn:hover {
+    background: #333;
+}
+
+/* ===================================
+   RESPONSIVE — MOBILE FRIENDLY
+=================================== */
+@media (max-width: 900px) {
+    .about-spacious {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-title {
+        font-size: 36px;
+    }
+
+    .about-spacious-text p {
+        font-size: 16px;
+    }
+
+    .about-spacious-btn {
+        font-size: 14px;
+        padding: 10px 22px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .button:hover {
   background-color: #000000;
 }
@@ -744,4 +960,97 @@ section {
   .about-us {
     margin-top: 5px !important;
   }
+}
+
+/* =======================================================
+   SECCIÓN DE CONTACTO ESTILO CM MODELS – VERSIÓN BLANCA
+======================================================= */
+
+.contact-premium {
+    background-color: #fff;          /* ANTES negro */
+    color: #000;                     /* ANTES blanco */
+    padding: 120px 40px;
+    text-align: center;
+    font-family: "Bodoni Moda SC", serif;
+}
+
+/* LOGO */
+.contact-logo img {
+    width: 150px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* TITULO */
+.contact-title {
+    font-size: 42px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000;                      /* negro */
+}
+
+/* SUBTEXTO */
+.contact-sub {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #444;                      /* gris oscuro */
+    line-height: 1.6;
+}
+
+/* GRID */
+.contact-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TARJETAS */
+.contact-card {
+    background: #fcfcfc;           /* ANTES negro */
+    padding: 30px 25px;
+    border-radius: 12px;
+    border: 1px solid #171717;     /* ANTES #1a1a1a */
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffffff;            /* ANTES gris claro */
+}
+
+/* Iconos */
+.contact-card i {
+    font-size: 38px;
+    margin-bottom: 12px;
+    color: #000;                   /* negro */
+}
+
+/* Titulos de card */
+.contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #000;                   /* negro */
+}
+
+/* Texto pequeño */
+.contact-card p {
+    font-size: 17px;
+    color: #333;                   /* gris oscuro */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
 }
